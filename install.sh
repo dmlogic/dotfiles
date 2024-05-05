@@ -30,7 +30,10 @@ cp -r "${SOURCE}/.aws" ~/
 
 
 # Install ohmyZsh
-sudo apt install -y zsh fonts-powerline
+# sudo apt install -y zsh fonts-powerline
+cd ~/Downloads && git clone git@github.com:powerline/fonts.git && cd fonts
+./install.sh
+cd ../ && rm -rf fonts
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp "${SOURCE}/.zshrc" ~/.zshrc
 cp -r "${SOURCE}/.oh-my-zsh" ~/
