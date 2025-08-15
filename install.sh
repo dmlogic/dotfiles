@@ -1,16 +1,38 @@
 #!/bin/bash
 
-# Exit immediately if a command exits with a non-zero status
-set -e
+clear
 
+# Get our install requirements
 source .env
 
-sudo apt update -y
-sudo apt upgrade -y
+# We absolutely must have git
+if ! command -v git &>/dev/null; then
+    sudo pacman -Sy --noconfirm --needed git
+fi
 
-# source ./utils/essentials.sh
-# source ./utils/ssh.sh
-# source ./utils/git.sh
+set -e
+
+# Give some feedback if it errors
+catch_errors() {
+  echo -e "\n\e[31mInstallation failed!\e[0m"
+}
+trap catch_errors ERR
+
+# Set an ENV var for whether we are restoring
+if [[ -n "$RESTORE_FROM" ]]; then
+    SHOULD_RESTORE=true
+else
+    SHOULD_RESTORE=false
+fi
+
+# Copy over ssh if we've asked to
+if [[ "$SHOULD_RESTORE" == true ]] && [[ "$RECOVER_SSH" == true ]]; then
+    source ./utils/recover-ssh.sh
+fi
+
+source ./utils/aur.sh
+source ./utils/essentials.sh
+source ./utils/configure-git.sh
 # source ./utils/docker.sh
 # #source ./utils/ohmyzsh.sh
 # source ./utils/terminal.sh

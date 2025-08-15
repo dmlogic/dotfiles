@@ -1,3 +1,8 @@
 #!/bin/bash
 
-sudo apt install -y curl unzip btop fuse libfuse2 ffmpeg jq whois
+echo "\n** Installing Essentials\n"
+
+yay -S --noconfirm --needed \
+  wget curl unzip jq \
+  wl-clipboard fastfetch btop \
+  man less whois
