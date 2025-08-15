@@ -33,7 +33,7 @@ fi
 source ./utils/aur.sh
 source ./utils/essentials.sh
 source ./utils/configure-git.sh
-# source ./utils/docker.sh
+source ./utils/docker.sh
 # #source ./utils/ohmyzsh.sh
 # source ./utils/terminal.sh
 # source ./utils/webdev.sh

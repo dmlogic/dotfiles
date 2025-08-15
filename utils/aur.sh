@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "** Installing AUR"
+echo -e "** Installing AUR"
 
 # Only add Chaotic-AUR if the architecture is x86_64 so ARM users can build the packages
 if [[ "$(uname -m)" == "x86_64" ]] && ! command -v yay &>/dev/null; then
@@ -19,7 +19,7 @@ if [[ "$(uname -m)" == "x86_64" ]] && ! command -v yay &>/dev/null; then
     # Install yay directly from Chaotic-AUR
     sudo pacman -Sy --needed --noconfirm yay
   else
-    echo "Failed to install Chaotic-AUR, so won't include it in pacman config!"
+    echo -e "Failed to install Chaotic-AUR, so won't include it in pacman config!"
   fi
 fi
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "\n** Configuring git\n"
+echo -e "\n** Configuring git\n"
 
 git config --global alias.co checkout
 git config --global alias.br branch

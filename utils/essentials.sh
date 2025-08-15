@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "\n** Installing Essentials\n"
+echo -e "\n** Installing Essentials\n"
 
 yay -S --noconfirm --needed \
   wget curl unzip jq \
