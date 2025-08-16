@@ -1,0 +1,20 @@
+{
+    "editor.allowVariableFontsInAccessibilityMode": true,
+    "editor.fontFamily": "'Adwaita mono', 'monospace', monospace",
+    "editor.fontSize": 16,
+    "editor.lineHeight": 2.2,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+        80
+    ],
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "search.useIgnoreFiles": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.altClickMovesCursor": false,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.fontFamily": "Adwaita mono",
+    "terminal.integrated.lineHeight": 1.5,
+    "window.zoomLevel": 1
+}

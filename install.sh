@@ -2,6 +2,8 @@
 
 clear
 
+INSTALL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Get our install requirements
 source .env
 
@@ -30,7 +32,7 @@ if [[ "$SHOULD_RESTORE" == true ]] && [[ "$RECOVER_SSH" == true ]]; then
     source ./utils/recover-ssh.sh
 fi
 
-source ./utils/aur.sh
+# source ./utils/aur.sh
 # source ./utils/essentials.sh
 # source ./utils/configure-git.sh
 # source ./utils/docker.sh
@@ -38,8 +40,7 @@ source ./utils/aur.sh
 # source ./utils/terminal.sh
 # source ./utils/webdev.sh
 
-# source ./apps/angry-ip.sh
-# #source ./apps/code.sh
+# source ./apps/code.sh
 # source ./apps/etcher.sh
 # source ./apps/gimp.sh
 # source ./apps/inkscape.sh

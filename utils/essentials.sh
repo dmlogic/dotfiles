@@ -6,3 +6,5 @@ yay -S --noconfirm --needed \
   wget curl unzip jq \
   wl-clipboard fastfetch btop \
   man less whois gum
+
+sudo pacman -Sy --noconfirm --needed nmap
