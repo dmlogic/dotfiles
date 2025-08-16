@@ -5,8 +5,9 @@ Latest incarnation is Arch based.
 ## Usage
 
 * Start with a fresh install of Manjaro, or something with a Gnome desktop
-* Get access to this repo
-* Clone
+
+run `wget -qO- https://raw.githubusercontent.com/dmlogic/dotfiles/refs/heads/main/install.sh | bash`
+
 * Create a .env file and populate
 * If restoring, have a mounted drive in the expected format
 * Check the contents of `provision.sh` and comment anything not required
