@@ -12,4 +12,3 @@ SOURCE_REPO="dmlogic/dotfiles"
 
 rm -rf ~/.local/share/dotfiles/
 git clone "https://github.com/${SOURCE_REPO}.git" ~/.local/share/dotfiles >/dev/null
-cd ~/.local/share/dotfiles
