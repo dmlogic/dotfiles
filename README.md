@@ -21,7 +21,6 @@ This stuff should be backed up anyway, but if planning a re-install, use
 
 ## Roadmap
 
-* Get the web2app scripts working
 * Finish the install by initiating the `gh auth login` process
 
 ## Thanks to

@@ -50,6 +50,7 @@ source $INSTALL_DIR/apps/spotify.sh
 source $INSTALL_DIR/apps/subsurface.sh
 source $INSTALL_DIR/apps/meld.sh
 source $INSTALL_DIR/apps/dbeaver.sh
+source $INSTALL_DIR/apps/discord.sh
 
 if [[ "$SHOULD_RESTORE" == true ]] && [[ "$RECOVER_DOCS" == true ]]; then
     rsync -a --info=progress2 ${RESTORE_FROM}Code ~/

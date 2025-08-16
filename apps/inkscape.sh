@@ -2,5 +2,5 @@
 
 echo -e "\n** Installing Inkscape\n"
 
-sudo pacman -S --noconfirm --needed inkscape
+sudo pacman -Sy --noconfirm --needed inkscape
 

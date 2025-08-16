@@ -2,5 +2,5 @@
 
 echo -e "\n** Installing Office Suite\n"
 
-sudo pacman -S --noconfirm --needed  libreoffice-fresh
+sudo pacman -Sy --noconfirm --needed  libreoffice-fresh
 
