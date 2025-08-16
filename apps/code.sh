@@ -4,6 +4,8 @@ echo -e "\n** Installing VS Code\n"
 
 yay -S --noconfirm --needed visual-studio-code-bin
 
+mkdir -p ~/.config/Code/User/
+
 if [[ "$SHOULD_RESTORE" == true ]]; then
     cp $INSTALL_DIR/config/vscode/settings.json ~/.config/Code/User/settings.json
     cp $INSTALL_DIR/config/vscode/keybindings.json ~/.config/Code/User/keybindings.json

@@ -4,7 +4,8 @@ echo -e "\n** Installing Terminal tools\n"
 
 sudo pacman -Sy --noconfirm --needed ghostty
 
-if ! grep -q "working-directory" ~/.config/ghostty/config 2>/dev/null; then
+if [[ ! -f "~/.config/ghostty/config" ]]; then
+    mkdir ~/.config/ghostty
     cat >> ~/.config/ghostty/config<< EOF
     adjust-cell-height = 40%
     background-opacity = 0.9

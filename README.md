@@ -9,8 +9,8 @@ Latest incarnation is Arch based.
 * Clone
 * Create a .env file and populate
 * If restoring, have a mounted drive in the expected format
-* Check the contents of `install.sh` and comment anything not required
-* Run `./install.sh`
+* Check the contents of `provision.sh` and comment anything not required
+* Run `./provision.sh`
 
 ## Restore planning
 
