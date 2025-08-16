@@ -2,14 +2,18 @@
 
 clear
 
-INSTALL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+INSTALL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/"
 
 # Get our install requirements
-source .env
+if [[ ! -f "$INSTALL_DIR.env" ]]; then
+    echo "Error: $INSTALL_DIR.env not found."
+    exit 1
+fi
+source $INSTALL_DIR.env
 
 # We absolutely must have git
 if ! command -v git &>/dev/null; then
-    sudo pacman -Sy --noconfirm --needed git
+    sudo pacman -S --noconfirm --needed git
 fi
 
 set -e
@@ -29,34 +33,25 @@ fi
 
 # Copy over ssh if we've asked to
 if [[ "$SHOULD_RESTORE" == true ]] && [[ "$RECOVER_SSH" == true ]]; then
-    source ./utils/recover-ssh.sh
+    source $INSTALL_DIR/utils/recover-ssh.sh
 fi
 
-# source ./utils/aur.sh
-# source ./utils/essentials.sh
-# source ./utils/configure-git.sh
-# source ./utils/docker.sh
-# source ./utils/ohmyzsh.sh
-# source ./utils/terminal.sh
-# source ./utils/webdev.sh
+source $INSTALL_DIR/utils/aur.sh
+source $INSTALL_DIR/utils/essentials.sh
+source $INSTALL_DIR/utils/configure-git.sh
+source $INSTALL_DIR/utils/docker.sh
+source $INSTALL_DIR/utils/ohmyzsh.sh
+source $INSTALL_DIR/utils/terminal.sh
+source $INSTALL_DIR/utils/webdev.sh
+source $INSTALL_DIR/utils/aws.sh
 
-# source ./apps/code.sh
-# source ./apps/etcher.sh
-# source ./apps/gimp.sh
-# source ./apps/inkscape.sh
-# source ./apps/office.sh
-# source ./apps/spotify.sh
-# source ./apps/subsurface.sh
-
-
-# todo
-# timeshift
-# Chrome
-# bitwarden
-# dbeaver
-# gnome tweaks
-# git auth
-# aliases
-# aws cli
-# Google drive integration
-# webapps for WhatsApp, YouTube
+source $INSTALL_DIR/apps/code.sh
+source $INSTALL_DIR/apps/chrome.sh
+source $INSTALL_DIR/apps/etcher.sh
+source $INSTALL_DIR/apps/gimp.sh
+source $INSTALL_DIR/apps/inkscape.sh
+source $INSTALL_DIR/apps/office.sh
+source $INSTALL_DIR/apps/spotify.sh
+source $INSTALL_DIR/apps/subsurface.sh
+source $INSTALL_DIR/apps/meld.sh
+source $INSTALL_DIR/apps/dbeaver.sh

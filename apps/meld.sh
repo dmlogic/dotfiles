@@ -1,4 +1,6 @@
 #!/bin/bash
 
-sudo apt install -y meld
+echo -e "\n** Installing Meld\n"
+
+sudo pacman -S --noconfirm --needed meld
 

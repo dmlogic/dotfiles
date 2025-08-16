@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo -e "\n** Installing VS Code\n"
+
 yay -S --noconfirm --needed visual-studio-code-bin
 
 if [[ "$SHOULD_RESTORE" == true ]]; then

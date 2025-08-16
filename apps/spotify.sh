@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -sS https://download.spotify.com/debian/pubkey_C85668DF69375001.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
-echo "deb [signed-by=/etc/apt/trusted.gpg.d/spotify.gpg] https://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt update -y
-sudo apt install -y spotify-client
+echo -e "\n** Installing Spotify\n"
+
+yay -S --noconfirm --needed spotify ||
+    echo -e "\e[31mFailed to install spotify. Continuing without!\e[0m"

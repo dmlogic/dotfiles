@@ -1,7 +1,9 @@
 #!/bin/bash
 
-sudo add-apt-repository -y ppa:subsurface/subsurface-daily
-sudo apt update -y
-sudo apt install -y subsurface 
+echo -e "\n** Installing Subsurface\n"
 
-cp "${RECOVER_FOLDER}.subsurface/darren.xml" ~/.subsurface/darren.xml
+yay -S --noconfirm --needed subsurface-git
+
+if [[ "$SHOULD_RESTORE" == true ]]; then
+    cp "${RESTORE_FROM}.subsurface/darren.xml" ~/.subsurface/darren.xml
+fi

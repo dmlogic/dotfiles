@@ -1,4 +1,6 @@
 #!/bin/bash
 
-sudo apt install -y libreoffice
+echo -e "\n** Installing Office Suite\n"
+
+sudo pacman -S --noconfirm --needed  libreoffice-fresh
 

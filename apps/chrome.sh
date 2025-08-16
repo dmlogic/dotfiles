@@ -1,12 +1,8 @@
 #!/bin/bash
 
-cd ~/Downloads
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install -y ./google-chrome-stable_current_amd64.deb
-rm google-chrome-stable_current_amd64.deb
-xdg-settings set default-web-browser google-chrome.desktop
-cd -
+echo -e "\n** Installing Google Chrome\n"
 
+yay -S --noconfirm --needed google-chrome
 
-# @todo
-# gnome shell extensions
+xdg-settings set default-web-browser com.google.Chrome.desktop ||
+    echo -e "\e[31mFailed to set Google Chrome as default browser. Continuing without!\e[0m"
