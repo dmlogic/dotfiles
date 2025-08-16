@@ -31,14 +31,12 @@ if [[ "$SHOULD_RESTORE" == true ]] && [[ "$RECOVER_SSH" == true ]]; then
 fi
 
 source ./utils/aur.sh
-source ./utils/power.sh
 # source ./utils/essentials.sh
 # source ./utils/configure-git.sh
 # source ./utils/docker.sh
 # source ./utils/ohmyzsh.sh
 # source ./utils/terminal.sh
 # source ./utils/webdev.sh
-source ./utils/configure-desktop.sh
 
 # source ./apps/angry-ip.sh
 # #source ./apps/code.sh
