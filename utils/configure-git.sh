@@ -18,6 +18,8 @@ node_modules
 vendor
 EOF
 
+git config --global core.excludesFile '~/.gitignore'
+
 yay -S --noconfirm --needed \
   github-cli \
   lazygit

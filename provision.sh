@@ -56,3 +56,6 @@ if [[ "$SHOULD_RESTORE" == true ]] && [[ "$RECOVER_DOCS" == true ]]; then
     rsync -a --info=progress2 ${RESTORE_FROM}Code ~/
     rsync -a --info=progress2 ${RESTORE_FROM}Documents ~/
 fi
+
+# Optional scripts
+# source $INSTALL_DIR/utils/remote_access.sh
