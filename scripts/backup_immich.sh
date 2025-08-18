@@ -13,3 +13,4 @@ rsync -av --delete $IMMICH_LIBRARY_PATH $IMMICH_BACKUP_PATH
 
 
 # rclone to Goolge Drive
+rclone copy $IMMICH_LIBRARY_PATH/upload google-drive:Services/immich/upload
