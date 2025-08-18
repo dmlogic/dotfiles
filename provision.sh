@@ -27,36 +27,36 @@ else
 fi
 
 # Copy over ssh if we've asked to
-# if [[ "$SHOULD_RESTORE" == true ]] && [[ "$RECOVER_SSH" == true ]]; then
-#     source $INSTALL_DIR/utils/recover-ssh.sh
-# fi
+if [[ "$SHOULD_RESTORE" == true ]] && [[ "$RECOVER_SSH" == true ]]; then
+    source $INSTALL_DIR/utils/recover-ssh.sh
+fi
 
-# source $INSTALL_DIR/utils/aur.sh
-# source $INSTALL_DIR/utils/essentials.sh
-# source $INSTALL_DIR/utils/configure-git.sh
-# source $INSTALL_DIR/utils/docker.sh
-# source $INSTALL_DIR/utils/ohmyzsh.sh
-# source $INSTALL_DIR/utils/terminal.sh
-# source $INSTALL_DIR/utils/webdev.sh
-# source $INSTALL_DIR/utils/aws.sh
+source $INSTALL_DIR/utils/aur.sh
+source $INSTALL_DIR/utils/essentials.sh
+source $INSTALL_DIR/utils/configure-git.sh
+source $INSTALL_DIR/utils/docker.sh
+source $INSTALL_DIR/utils/ohmyzsh.sh
+source $INSTALL_DIR/utils/terminal.sh
+source $INSTALL_DIR/utils/webdev.sh
+source $INSTALL_DIR/utils/aws.sh
 
-# source $INSTALL_DIR/apps/code.sh
-# source $INSTALL_DIR/apps/chrome.sh
-# source $INSTALL_DIR/apps/liveusb.sh
-# source $INSTALL_DIR/apps/gimp.sh
-# source $INSTALL_DIR/apps/inkscape.sh
-# source $INSTALL_DIR/apps/office.sh
-# source $INSTALL_DIR/apps/spotify.sh
-# source $INSTALL_DIR/apps/subsurface.sh
-# source $INSTALL_DIR/apps/meld.sh
-# source $INSTALL_DIR/apps/dbeaver.sh
-# source $INSTALL_DIR/apps/discord.sh
+source $INSTALL_DIR/apps/code.sh
+source $INSTALL_DIR/apps/chrome.sh
+source $INSTALL_DIR/apps/liveusb.sh
+source $INSTALL_DIR/apps/gimp.sh
+source $INSTALL_DIR/apps/inkscape.sh
+source $INSTALL_DIR/apps/office.sh
+source $INSTALL_DIR/apps/spotify.sh
+source $INSTALL_DIR/apps/subsurface.sh
+source $INSTALL_DIR/apps/meld.sh
+source $INSTALL_DIR/apps/dbeaver.sh
+source $INSTALL_DIR/apps/discord.sh
 
-# if [[ "$SHOULD_RESTORE" == true ]] && [[ "$RECOVER_DOCS" == true ]]; then
-#     rsync -a --info=progress2 ${RESTORE_FROM}Code ~/
-#     rsync -a --info=progress2 ${RESTORE_FROM}Documents ~/
-# fi
+if [[ "$SHOULD_RESTORE" == true ]] && [[ "$RECOVER_DOCS" == true ]]; then
+    rsync -a --info=progress2 ${RESTORE_FROM}Code ~/
+    rsync -a --info=progress2 ${RESTORE_FROM}Documents ~/
+fi
 
 # Optional scripts
 # source $INSTALL_DIR/utils/remote_access.sh
-source $INSTALL_DIR/utils/service_backup.sh
+# source $INSTALL_DIR/utils/service_backup.sh
