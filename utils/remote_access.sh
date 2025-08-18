@@ -5,7 +5,7 @@
 
 # It assumes that you a RSA name id_rsa setup and tested to access the NAS with admin@
 
-sudo pacman -Sy --noconfirm --needed vim sshfs
+sudo pacman -Sy --noconfirm --needed vim sshfs rclone
 
 mount_nas() {
     if [ -z "$NAS_USER" ] || [ -z "$NAS_HOST" ] || [ -z "$NAS_MOUNT_POINT" ] || [ -z "$NAS_SHARE" ]; then
@@ -25,3 +25,4 @@ if [ -d "$NAS_MOUNT_POINT" ]; then
     mount_nas
 fi
 
+echo -e "\n** Installed remote access tools. Remember to run `rclone config`\n"
