@@ -7,9 +7,13 @@ fi
 
 source "$1"
 
+# Do not keep an endless history of database backups
+rm $IMMICH_BACKUP_PATH/library/backups/*.sql
+
+
 # copy new files to the NAS
 echo -e "** Backing up Immich to NAS"
-rsync -av --delete $IMMICH_LIBRARY_PATH $IMMICH_BACKUP_PATH
+rsync -av $IMMICH_LIBRARY_PATH $IMMICH_BACKUP_PATH
 
 
 # rclone to Goolge Drive
