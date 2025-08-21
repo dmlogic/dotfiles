@@ -39,6 +39,7 @@ source $INSTALL_DIR/utils/ohmyzsh.sh
 source $INSTALL_DIR/utils/terminal.sh
 source $INSTALL_DIR/utils/webdev.sh
 source $INSTALL_DIR/utils/aws.sh
+source $INSTALL_DIR/utils/network.sh
 
 source $INSTALL_DIR/apps/code.sh
 source $INSTALL_DIR/apps/chrome.sh
