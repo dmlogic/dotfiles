@@ -2,7 +2,7 @@
 
 echo -e "\n** Installing Terminal tools\n"
 
-sudo pacman -Sy --noconfirm --needed ghostty
+sudo pacman -S --noconfirm --needed ghostty
 
 if [[ ! -f "~/.config/ghostty/config" ]]; then
     mkdir ~/.config/ghostty
@@ -13,8 +13,8 @@ if [[ ! -f "~/.config/ghostty/config" ]]; then
     cursor-style = block_hollow
     font-family = "Adwaita Mono"
     theme = MaterialOcean
-    window-height = 25
-    window-width = 100
+    window-height = 40
+    window-width = 150
     working-directory = "/home/darren/Code"
 EOF
 fi

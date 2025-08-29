@@ -3,7 +3,7 @@
 # This script enables *.localhost names to be resolved on the local network
 
 # 1. Install nss-mdns
-sudo pacman -Sy --noconfirm nss-mdns
+sudo pacman -S --noconfirm nss-mdns
 
 # 2. Edit resolved.conf
 sudo sed -i -e 's/^#*MulticastDNS=.*/MulticastDNS=yes/' /etc/systemd/resolved.conf

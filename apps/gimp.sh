@@ -2,7 +2,7 @@
 
 echo -e "\n** Installing Gimp\n"
 
-sudo pacman -Sy --noconfirm --needed gimp
+sudo pacman -S --noconfirm --needed gimp
 
 echo -e "\n** Installing Pinta\n"
 

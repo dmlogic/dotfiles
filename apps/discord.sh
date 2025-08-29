@@ -2,5 +2,5 @@
 
 echo -e "\n** Installing Discord\n"
 
-sudo pacman -Sy --noconfirm --needed discord
+sudo pacman -S --noconfirm --needed discord
 

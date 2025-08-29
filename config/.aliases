@@ -1,0 +1,21 @@
+# General terminal
+alias ll='ls -alFh'
+
+# Git
+alias ga='git add'
+alias gaa='git add --all'
+alias gc='git commit -a -m'
+alias gco='git checkout'
+alias gpush='git push origin'
+alias gpull='git pull origin'
+alias gs='git status'
+alias greset='git fetch origin && git reset --hard origin/master'
+alias gprune='git remote prune origin'
+
+# Coding
+alias art='php artisan'
+
+# Utility
+alias myip='wget http://ipinfo.io/ip -qO -'
+alias ld='lazydocker'
+alias lg='lazygit'

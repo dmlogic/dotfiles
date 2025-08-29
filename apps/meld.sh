@@ -2,5 +2,5 @@
 
 echo -e "\n** Installing Meld\n"
 
-sudo pacman -Sy --noconfirm --needed meld
+sudo pacman -S --noconfirm --needed meld
 
