@@ -18,3 +18,5 @@ AUTHENTIK_SCRIPT_PATH="${INSTALL_DIR}scripts/backup_authentik.sh"
 sudo rm $AUTHENTIK_CRON_FILE
 echo "0 3 * * * root $AUTHENTIK_SCRIPT_PATH $ENV_PATH" | sudo tee -a "$AUTHENTIK_CRON_FILE" > /dev/null
 sudo chmod 644 "$AUTHENTIK_CRON_FILE"
+
+sudo systemctl enable --now cronie.service
