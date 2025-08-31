@@ -7,4 +7,4 @@ yay -S --noconfirm --needed \
   wl-clipboard fastfetch btop \
   man less whois gum base-devel
 
-sudo pacman -S --noconfirm --needed nmap base-devel
+sudo pacman -S --noconfirm --needed nmap base-devel localsend
