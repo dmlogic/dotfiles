@@ -7,7 +7,7 @@ IMMICH_CRON_FILE="/etc/cron.d/immich_backup"
 IMMICH_SCRIPT_PATH="${INSTALL_DIR}scripts/backup_immich.sh"
 
 sudo rm $IMMICH_CRON_FILE
-echo "0 2 * * * root $IMMICH_SCRIPT_PATH $ENV_PATH" | sudo tee -a "$IMMICH_CRON_FILE" > /dev/null
+echo "0 2 * * * darren $IMMICH_SCRIPT_PATH $ENV_PATH" | sudo tee -a "$IMMICH_CRON_FILE" > /dev/null
 sudo chmod 644 "$CRON_FILE"
 
 

@@ -8,7 +8,7 @@ fi
 source "$1"
 
 # Do not keep an endless history of database backups
-rm $IMMICH_BACKUP_PATH/library/backups/*.sql
+rm $IMMICH_BACKUP_PATH/library/backups/*.gz
 
 
 # copy new files to the NAS
