@@ -27,5 +27,7 @@ docker exec \
     -d "$AUTHENTIK_PG_DB" \
     -F c -b -v -O -x > "$BACKUP_FILE" # Using custom format (-Fc) is recommended
 
+gzip $BACKUP_FILE
+
 # rclone to Goolge Drive
 rclone sync $AUTHENTIC_BACKUP_PATH google-drive:Services/authentik
